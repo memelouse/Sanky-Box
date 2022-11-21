@@ -4652,13 +4652,6 @@ loadscreen3:AddButton(
                     end
                 )
 
-                visualizedesyncvelspoofer:AddColorpicker(
-                    Color3.fromRGB(0, 140, 175),
-                    function(Color)
-                        velocityball.Color = Color
-                    end
-                )
-
                 local niggacumrefreshrate2 = 0.1
                 local velocitynotifi =
                     antilock63:AddToggle(
