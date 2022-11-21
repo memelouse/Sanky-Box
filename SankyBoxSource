@@ -4586,12 +4586,6 @@ loadscreen3:AddButton(
                             elseif velocitytype == "Underground" then
                                 LocalPlayer.Character.HumanoidRootPart.AssemblyLinearVelocity =
                                     Vector3.new(0, -10, 0) * Powervel
-                            elseif velocitytype == "MouseControl" then
-                                LocalPlayer.Character.HumanoidRootPart.Velocity =
-                                    (game.Players.LocalPlayer:GetMouse().hit.p -
-                                    LocalPlayer.Character.HumanoidRootPart.Position).Unit *
-                                    Powervel +
-                                    workspace.CurrentCamera.CFrame.LookVector * Powervel
                             elseif velocitytype == "Up" then
                                 LocalPlayer.Character.HumanoidRootPart.AssemblyLinearVelocity =
                                     Vector3.new(0, 10, 0) * Powervel
@@ -4713,7 +4707,7 @@ loadscreen3:AddButton(
                 local velocitytypetype =
                     antilock63:AddDropdown(
                     "Type",
-                    {"Custom", "MultiPlier", "MouseControl", "NoVelocity", "Random", "Underground", "Up", "LookVector"},
+                    {"Custom", "MultiPlier", "NoVelocity", "Random", "Underground", "Up", "LookVector"},
                     "Custom",
                     false,
                     function(Value)
